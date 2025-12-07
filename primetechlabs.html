@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeTech Labs | Inovação e Inteligência</title>
+    <!-- Carregamento do Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração do Tema e Fonte Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0c10; /* Fundo escuro */
+            color: #c5c6c7; /* Texto claro */
+        }
+        .prime-gradient {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+        .prime-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .prime-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(118, 75, 162, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho (Header) -->
+    <header class="sticky top-0 z-50 bg-[#0b0c10] bg-opacity-95 shadow-lg backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold text-[#667eea] tracking-wider">
+                PrimeTech <span class="text-[#45a29e]">Labs</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#servicos" class="text-white hover:text-[#667eea] transition duration-150">Serviços</a>
+                <!-- Link para Portfólio removido -->
+                <a href="#sobre" class="text-white hover:text-[#667eea] transition duration-150">Sobre Nós</a>
+                <a href="#contato" class="px-4 py-2 prime-gradient text-white rounded-lg font-medium prime-button">Entre em Contato</a>
+            </nav>
+            <!-- Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Menu Dropdown Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-[#0b0c10]">
+            <a href="#servicos" class="block text-white hover:text-[#667eea] transition duration-150">Serviços</a>
+            <!-- Link para Portfólio removido -->
+            <a href="#sobre" class="block text-white hover:text-[#667eea] transition duration-150">Sobre Nós</a>
+            <a href="#contato" class="block px-4 py-2 text-center prime-gradient text-white rounded-lg font-medium prime-button mt-2">Entre em Contato</a>
+        </div>
+    </header>
+
+    <!-- Seção Principal (Hero) -->
+    <section class="relative pt-16 pb-24 lg:pt-32 lg:pb-40 text-center overflow-hidden">
+        <!-- Elemento de fundo abstrato (Visual tech) -->
+        <div class="absolute inset-0 bg-cover opacity-10" style="background-image: url('https://placehold.co/1200x800/1f2833/667eea?text=AI+Pattern');"></div>
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white">
+                Desenvolvimento <span class="prime-gradient bg-clip-text text-transparent">Acelerado por IA</span>.
+            </h1>
+            <p class="text-xl sm:text-2xl text-[#c5c6c7] mb-10 max-w-3xl mx-auto">
+                Criação de Sites e <span class="font-semibold">APKs de alta qualidade</span>, usando as melhores ferramentas de IA do mercado para agilidade e precisão.
+            </p>
+            <a href="#servicos" class="px-8 py-3.5 text-lg prime-gradient text-white rounded-xl font-bold uppercase tracking-wider prime-button shadow-xl">
+                Descubra a Velocidade da IA
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção de Serviços -->
+    <section id="servicos" class="py-20 lg:py-28 bg-[#1f2833]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 text-white">Nosso Desenvolvimento Assistido por IA (DAIA)</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                <!-- Cartão 1: Desenvolvimento de Sites com IA -->
+                <div class="bg-[#0b0c10] p-8 rounded-2xl shadow-2xl border border-[#764ba2] transition transform hover:scale-[1.02] duration-300">
+                    <div class="text-4xl text-[#667eea] mb-4">
+                        <!-- Ícone de Navegador (Inline SVG) -->
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9h-3a8 8 0 00-8-8 1 1 0 00-1 0 8 8 0 00-8 8H3a9 9 0 009 9 9 9 0 009-9z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">Sites e Soluções Web Inteligentes</h3>
+                    <p class="text-[#c5c6c7] leading-relaxed mb-4">
+                        Construímos plataformas web utilizando IAs de ponta para otimizar o fluxo de trabalho, desde o protótipo até a entrega final.
+                    </p>
+                    <ul class="space-y-2 text-[#a8a9ad]">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-[#45a29e]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Geração de código base e componentes complexos com auxílio de modelos de linguagem (ex: Gemini).
+                        </li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-[#45a29e]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Refatoração e otimização de performance para alta velocidade.
+                        </li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-[#45a29e]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Sugestões de design e layouts responsivos baseados em tendências atuais.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cartão 2: Desenvolvimento de Aplicativos Móveis (APKs) com IA -->
+                <div class="bg-[#0b0c10] p-8 rounded-2xl shadow-2xl border border-[#667eea] transition transform hover:scale-[1.02] duration-300">
+                    <div class="text-4xl text-[#764ba2] mb-4">
+                        <!-- Ícone de Mobile (Inline SVG) -->
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-white">Aplicativos Móveis (APKs) de Alto Desempenho</h3>
+                    <p class="text-[#c5c6c7] leading-relaxed mb-4">
+                        Desenvolvimento de APKs robustos e seguros para Android e iOS, com testes rigorosos e velocidade de entrega incomparável.
+                    </p>
+                    <ul class="space-y-2 text-[#a8a9ad]">
+                         <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-[#45a29e]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Uso de IA para identificar e corrigir falhas de segurança e bugs de forma proativa.
+                        </li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-[#45a29e]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Sugestões de arquitetura de código otimizada para o ecossistema mobile.
+                        </li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-[#45a29e]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Criação e validação de descrições e materiais de marketing para App Stores.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section id="sobre" class="py-20 lg:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white">Sobre a PrimeTech Labs</h2>
+                <p class="text-lg text-[#c5c6c7] mb-6">
+                    Na PrimeTech Labs, combinamos a expertise humana com o poder da Inteligência Artificial. Utilizamos modelos de linguagem de última geração, como o Gemini, para acelerar a escrita, otimização e testes de código, garantindo que seu projeto seja entregue mais rápido, com mais qualidade e a custos mais eficientes.
+                </p>
+                <p class="text-[#a8a9ad] italic">
+                    "Não reinventamos a roda; usamos a IA para construir foguetes com ela."
+                </p>
+            </div>
+            <div class="md:w-1/2 w-full">
+                <!-- Gráfico ou visual tech simples (Placeholder) -->
+                <div class="h-64 prime-gradient rounded-xl p-6 flex items-center justify-center shadow-2xl">
+                    <p class="text-2xl font-bold text-white text-center">
+                        <span class="text-5xl block mb-2">3X</span>
+                        <span class="block">Mais Velocidade na Entrega</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="py-20 lg:py-28 bg-[#1f2833]">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Pronto para a Próxima Geração?</h2>
+            <p class="text-lg text-[#c5c6c7] mb-12">
+                Preencha o formulário para simular um contato e visualizar a interação do nosso sistema de captação de projetos.
+            </p>
+
+            <form id="contactForm" class="bg-[#0b0c10] p-8 rounded-2xl shadow-2xl border border-[#764ba2]">
+                <div class="mb-6">
+                    <label for="name" class="block text-left text-sm font-medium text-white mb-2">Seu Nome</label>
+                    <input type="text" id="name" name="name" required class="w-full p-3 rounded-lg bg-[#1f2833] border border-[#45a29e] text-white focus:ring-[#667eea] focus:border-[#667eea] transition duration-150" placeholder="João da Silva (Apenas para demonstração)">
+                </div>
+                <div class="mb-8">
+                    <label for="message" class="block text-left text-sm font-medium text-white mb-2">Mensagem / Ideia do Projeto</label>
+                    <textarea id="message" name="message" rows="4" required class="w-full p-3 rounded-lg bg-[#1f2833] border border-[#45a29e] text-white focus:ring-[#667eea] focus:border-[#667eea] transition duration-150" placeholder="Quero desenvolver um APK de [Tipo]... (Apenas para demonstração)"></textarea>
+                </div>
+                <button type="submit" class="w-full px-6 py-3 prime-gradient text-white font-bold rounded-lg uppercase tracking-wider prime-button">
+                    Simular Envio de Proposta
+                </button>
+                <p id="successMessage" class="mt-4 text-[#45a29e] hidden">Simulação concluída! Em um site real, sua mensagem seria enviada aqui.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé (Footer) -->
+    <footer class="bg-[#0b0c10] border-t border-[#1f2833] py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-[#a8a9ad] mb-4 md:mb-0">
+                    &copy; <span id="currentYear"></span> PrimeTech Labs. Amostra de Portfólio.
+                </p>
+                <div class="flex space-x-6">
+                    <!-- Links para Termos e Privacidade mantidos como exemplo de estrutura -->
+                    <a href="#" class="text-[#a8a9ad] hover:text-[#667eea] transition duration-150">Termos de Serviço</a>
+                    <a href="#" class="text-[#a8a9ad] hover:text-[#667eea] transition duration-150">Política de Privacidade</a>
+                </div>
+            </div>
+            <p class="mt-6 text-xs text-[#a8a9ad]">
+                Desenvolvido com o auxílio de <span class="text-[#667eea] font-semibold">Tecnologias de IA de Ponta</span>.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript para interatividade -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Script para o menu mobile
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Fechar menu mobile ao clicar em um link
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // 2. Script para o Rodapé (Ano Atual)
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // 3. Script para o Formulário de Contato (Simulação)
+            const contactForm = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+
+            contactForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+                
+                // Simulação de envio de dados
+                console.log('Simulação de envio de formulário para portfólio. Nome:', document.getElementById('name').value);
+                
+                // Limpa o formulário e mostra mensagem de sucesso
+                contactForm.reset();
+                successMessage.classList.remove('hidden');
+                
+                // Oculta a mensagem de sucesso após 5 segundos
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>
