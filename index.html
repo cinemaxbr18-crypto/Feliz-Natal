@@ -88,7 +88,6 @@
     <div class="snow-container absolute inset-0 z-0"></div>
 
     <!-- Conteúdo Principal Centrado -->
-    <!-- w-full max-w-4xl garante que o conteúdo ocupe o máximo de largura, mas não seja gigante em desktop -->
     <main class="relative z-10 p-4 md:p-8 w-full max-w-4xl">
 
         <!-- Cartão Principal -->
@@ -97,7 +96,6 @@
             <!-- Título e Saudação (Responsividade na tipografia) -->
             <header class="text-center mb-8">
                 <p class="text-xl sm:text-2xl text-christmas-red font-bold">Da Nossa Família para a Sua</p>
-                <!-- O tamanho da fonte é ajustado: 5xl em mobile, 7xl em telas maiores (sm) -->
                 <h1 class="text-5xl sm:text-7xl font-bold text-christmas-green mt-2 leading-tight font-festive-simulated">
                     Feliz Natal!
                 </h1>
@@ -109,12 +107,11 @@
                 </div>
             </header>
 
-            <!-- Contador Regressivo (Responsividade no layout) -->
+            <!-- Contador Regressivo -->
             <section class="mb-8">
                 <h2 class="text-center text-3xl font-bold mb-4 text-christmas-red border-b-2 border-christmas-red pb-2">
                     Contagem Regressiva para o Natal
                 </h2>
-                <!-- Layout adaptável: 2 colunas em mobile, 4 colunas em tablet/notebook (sm:grid-cols-4) -->
                 <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
                     <!-- Unidades de tempo serão inseridas aqui pelo JavaScript -->
                 </div>
@@ -129,7 +126,6 @@
                 <p class="text-lg text-gray-700 mb-4">
                     Que esta época mágica traga muita felicidade e esperança a todos.
                 </p>
-                <!-- Botão: w-full em mobile, w-auto em telas maiores (sm:w-auto) -->
                 <button
                     id="wishButton"
                     class="w-full sm:w-auto px-8 py-3 bg-christmas-red text-snow-white font-extrabold rounded-full shadow-lg hover:shadow-xl transform hover:scale-[1.05] transition duration-200 border-b-4 border-christmas-green active:border-b-0 active:translate-y-0.5"
@@ -143,14 +139,20 @@
 
         </div>
 
-        <!-- Rodapé (Copyright Adaptativo) -->
+        <!-- Rodapé (Copyright com PrimeTechLabs Clicável) -->
         <footer class="text-center mt-8">
-            <!-- Balão adaptativo: 
-            - w-fit mx-auto: Centraliza e ocupa apenas a largura do conteúdo, evitando quebras.
-            - text-base sm:text-lg: Diminui a fonte em mobile para caber melhor.
-            -->
             <div class="w-fit mx-auto px-4 py-2 rounded-full bg-black/60 text-snow-white text-base sm:text-lg font-extrabold shadow-lg">
-                <p>Feito com Espírito Natalino 🌟 | Todos os direitos reservados à Equipe de Geilson © 2025</p>
+                <p>
+                    Feito com Espírito Natalino 🌟 | Todos os direitos reservados à 
+                    <!-- Link para primetechlabs.html -->
+                    <a 
+                        href="primetechlabs.html" 
+                        class="hover:underline hover:text-christmas-gold transition duration-200"
+                    >
+                        <span class="text-christmas-gold">PrimeTech</span><span class="text-christmas-green">Labs</span>
+                    </a> 
+                    © 2025
+                </p>
             </div>
         </footer>
 
