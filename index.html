@@ -2,7 +2,8 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ESSENCIAL PARA RESPONSIVIDADE: Define a largura do dispositivo como a largura do viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Feliz Natal 2025! 🎄</title>
     <!-- Carrega o Tailwind CSS CDN para estilização rápida e responsiva -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -13,20 +14,16 @@
             theme: {
                 extend: {
                     colors: {
-                        // --- COMO MUDAR AS CORES DO TEMA ---
-                        // Altere os valores HEX aqui para mudar o esquema de cores global:
-                        'christmas-red': '#B91C1C',      // Ex: Altere para '#FF0000' para um vermelho mais brilhante.
-                        'christmas-green': '#15803D',    // Ex: Altere para '#006400' para um verde mais escuro.
-                        'christmas-gold': '#FACC15',     // Ouro usado em bordas e detalhes.
-                        'snow-white': '#F9FAFB',         // Cor de fundo do cartão de mensagem.
+                        'christmas-red': '#B91C1C',
+                        'christmas-green': '#15803D',
+                        'christmas-gold': '#FACC15',
+                        'snow-white': '#F9FAFB',
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'], // Fonte padrão do corpo
-                        // A fonte 'festive' precisa ser carregada, aqui usamos uma simulação via CSS
-                        festive: ['Great Vibes', 'cursive'] 
+                        sans: ['Inter', 'sans-serif'], 
+                        festive: ['Great Vibes', 'cursive']
                     },
                     keyframes: {
-                        // Keyframe para a animação da neve caindo
                         snowfall: {
                             '0%': { transform: 'translateY(-100%)', opacity: '0.8' },
                             '100%': { transform: 'translateY(100vh)', opacity: '0.8' },
@@ -40,21 +37,19 @@
         }
     </script>
     <style>
-        /* Estilos personalizados para o efeito de neve e fundo */
+        /* Estilos base garantindo que o corpo ocupe 100% da tela e centralize o conteúdo */
         body {
-            /* --- COMO MUDAR O FUNDO --- */
-            /* Este é um gradiente que vai do verde (topo) ao vermelho (base), simulando a imagem. */
             background: linear-gradient(to bottom, #15803D 0%, #15803D 50%, #B91C1C 100%);
-            min-height: 100vh;
+            min-height: 100vh; /* Ocupa 100% da altura do viewport */
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
-            overflow: hidden; /* Garante que a neve não cause barras de rolagem */
+            overflow: hidden; 
             font-family: 'Inter', sans-serif;
         }
 
-        /* Efeito de Neve - Usando pseudo-elementos e SVGs de dados para criar flocos */
+        /* Efeito de Neve (Mantido para estética) */
         .snow-container::before,
         .snow-container::after {
             content: "";
@@ -63,19 +58,17 @@
             left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none; /* Não interfere com cliques no conteúdo principal */
+            pointer-events: none; 
             background-repeat: repeat;
         }
 
         .snow-container::before {
-            /* Flocos pequenos e rápidos (camada frontal) */
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Ccircle cx='5' cy='5' r='1' fill='%23F9FAFB'/%3E%3C/svg%3E");
             animation: snowfall 15s linear infinite;
             opacity: 0.7;
         }
 
         .snow-container::after {
-            /* Flocos maiores e mais lentos (camada de fundo) */
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='2' fill='%23F9FAFB'/%3E%3C/svg%3E");
             animation: snowfall 25s linear infinite reverse;
             opacity: 0.5;
@@ -84,26 +77,27 @@
 
         /* Simulação de Fonte Festiva */
         .font-festive-simulated {
-            font-family: 'Times New Roman', serif; /* Simulação para fontes script */
+            font-family: 'Times New Roman', serif; 
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
             letter-spacing: 0.05em;
         }
     </style>
 </head>
 <body class="selection:bg-christmas-gold selection:text-christmas-red">
-    <!-- Contêiner de Neve (camadas de fundo) -->
+    <!-- Contêiner de Neve -->
     <div class="snow-container absolute inset-0 z-0"></div>
 
-    <!-- Conteúdo Principal Centrado (garante que tudo fique sobre a neve) -->
+    <!-- Conteúdo Principal Centrado -->
+    <!-- w-full max-w-4xl garante que o conteúdo ocupe o máximo de largura, mas não seja gigante em desktop -->
     <main class="relative z-10 p-4 md:p-8 w-full max-w-4xl">
 
-        <!-- Cartão de Mensagem Principal -->
+        <!-- Cartão Principal -->
         <div class="bg-snow-white bg-opacity-95 p-6 sm:p-10 rounded-3xl shadow-2xl border-4 border-christmas-gold transform hover:scale-[1.02] transition-transform duration-300">
 
-            <!-- Título Festivo e Saudação -->
+            <!-- Título e Saudação (Responsividade na tipografia) -->
             <header class="text-center mb-8">
                 <p class="text-xl sm:text-2xl text-christmas-red font-bold">Da Nossa Família para a Sua</p>
-                <!-- O texto abaixo usa a classe .font-festive-simulated -->
+                <!-- O tamanho da fonte é ajustado: 5xl em mobile, 7xl em telas maiores (sm) -->
                 <h1 class="text-5xl sm:text-7xl font-bold text-christmas-green mt-2 leading-tight font-festive-simulated">
                     Feliz Natal!
                 </h1>
@@ -115,16 +109,16 @@
                 </div>
             </header>
 
-            <!-- Contador Regressivo (Countdown) -->
+            <!-- Contador Regressivo (Responsividade no layout) -->
             <section class="mb-8">
                 <h2 class="text-center text-3xl font-bold mb-4 text-christmas-red border-b-2 border-christmas-red pb-2">
                     Contagem Regressiva para o Natal
                 </h2>
-                <!-- O layout abaixo é responsivo: 2 colunas em mobile, 4 colunas em telas maiores -->
+                <!-- Layout adaptável: 2 colunas em mobile, 4 colunas em tablet/notebook (sm:grid-cols-4) -->
                 <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-                    <!-- Conteúdo gerado pelo JavaScript -->
+                    <!-- Unidades de tempo serão inseridas aqui pelo JavaScript -->
                 </div>
-                <!-- Mensagem exibida quando o contador chega a zero -->
+                <!-- Mensagem de Natal alcançado -->
                 <p id="message" class="text-center text-3xl font-extrabold text-christmas-green mt-6 hidden">
                     É NATAL! 🥳
                 </p>
@@ -135,14 +129,13 @@
                 <p class="text-lg text-gray-700 mb-4">
                     Que esta época mágica traga muita felicidade e esperança a todos.
                 </p>
-                <!-- Botão Interativo -->
+                <!-- Botão: w-full em mobile, w-auto em telas maiores (sm:w-auto) -->
                 <button
                     id="wishButton"
                     class="w-full sm:w-auto px-8 py-3 bg-christmas-red text-snow-white font-extrabold rounded-full shadow-lg hover:shadow-xl transform hover:scale-[1.05] transition duration-200 border-b-4 border-christmas-green active:border-b-0 active:translate-y-0.5"
                 >
                     Toque Aqui para Receber um Desejo
                 </button>
-                <!-- Mensagem de Desejo Aleatório (Exibida pelo JS) -->
                 <p id="wishMessage" class="mt-4 text-xl text-christmas-green font-semibold hidden">
                     Que o seu dia seja iluminado!
                 </p>
@@ -150,18 +143,21 @@
 
         </div>
 
-        <!-- Rodapé (Assinatura com Balão de Destaque) -->
+        <!-- Rodapé (Copyright Adaptativo) -->
         <footer class="text-center mt-8">
-            <!-- Balão semi-transparente -->
-            <div class="inline-block px-4 py-2 rounded-full bg-black/60 text-snow-white text-lg font-extrabold shadow-lg">
-                <p>Feito com Espírito Natalino 🌟 | Todos os direitos reservados à Equipe de Geilson © 2025</p>
+            <!-- Balão adaptativo: 
+            - w-fit mx-auto: Centraliza e ocupa apenas a largura do conteúdo, evitando quebras.
+            - text-base sm:text-lg: Diminui a fonte em mobile para caber melhor.
+            -->
+            <div class="w-fit mx-auto px-4 py-2 rounded-full bg-black/60 text-snow-white text-base sm:text-lg font-extrabold shadow-lg">
+                <p>Feito com Espírito Natalino 🌟 | Todos os direitos reservados à Equipe Geilson © 2025</p>
             </div>
         </footer>
 
     </main>
 
     <script>
-        // Variáveis globais para o ambiente (não usadas neste site simples, mas mantidas por boas práticas)
+        // Variáveis globais para o ambiente (não utilizadas neste app, mas mantidas)
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
         const firebaseConfig = typeof _firebase_config !== 'undefined' ? JSON.parse(_firebase_config) : {};
         const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
@@ -172,17 +168,14 @@
             const wishButton = document.getElementById('wishButton');
             const wishMessage = document.getElementById('wishMessage');
 
-            // --- COMO MUDAR A DATA ALVO ---
-            // A data alvo é o Natal (25 de Dezembro) do ano corrente.
+            // --- Configuração da Data Alvo ---
             const now = new Date();
-            // Mês 11 é Dezembro (a contagem de meses em JS começa em 0)
-            // Se quiser outra data (ex: Véspera de Natal), mude o '25' para '24'.
+            // Define o Natal (25 de Dezembro) do ano corrente
             let targetDate = new Date(now.getFullYear(), 11, 25, 0, 0, 0); 
 
-            // Lógica para pular para o próximo ano se o Natal já tiver passado.
+            // Se o Natal já passou, pula para o próximo ano
             if (now.getMonth() === 11 && now.getDate() > 25) {
                 targetDate = new Date(now.getFullYear() + 1, 11, 25, 0, 0, 0);
-                // Se você mudou a data alvo acima, certifique-se de ajustar este '25' também.
             }
 
             // Função que calcula e atualiza o contador a cada segundo
@@ -191,14 +184,14 @@
                 const distance = targetDate.getTime() - now;
 
                 if (distance < 0) {
-                    // Se a contagem terminar, exibe a mensagem de "É NATAL!"
+                    // Contagem finalizada
                     countdownEl.innerHTML = '';
                     messageEl.classList.remove('hidden');
                     clearInterval(interval);
                     return;
                 }
 
-                // Cálculos de tempo (dias, horas, minutos, segundos)
+                // Cálculos de tempo
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -214,28 +207,24 @@
                 // Renderiza os blocos do contador no HTML
                 countdownEl.innerHTML = timeUnits.map(unit => `
                     <div class="bg-christmas-red text-snow-white p-3 rounded-xl shadow-md border-b-2 border-christmas-gold">
-                        <!-- O método padStart(2, '0') garante que números menores que 10 tenham um zero à frente -->
+                        <!-- padStart garante zero à frente (ex: 05) -->
                         <p class="text-4xl sm:text-5xl font-extrabold leading-none">${unit.value.toString().padStart(2, '0')}</p>
                         <p class="text-sm uppercase font-semibold mt-1">${unit.label}</p>
                     </div>
                 `).join('');
             }
 
-            // Inicia e atualiza o contador a cada segundo (1000ms)
+            // Inicia o contador
             const interval = setInterval(updateCountdown, 1000);
-            updateCountdown(); // Chama imediatamente para carregar os valores iniciais
+            updateCountdown(); 
 
-            // --- COMO MUDAR AS MENSAGENS INTERATIVAS ---
-            // Lógica do Botão de Desejo. Lista de frases expandida e combinada:
+            // --- Lógica do Botão de Desejo ---
             const wishes = [
                 "Que a magia do Natal ilumine seu caminho!",
                 "Desejamos que todos os seus sonhos se realizem.",
                 "Paz, saúde e prosperidade para o próximo ano!",
                 "Um Natal repleto de abraços e carinho.",
                 "Que a esperança se renove em seu coração.",
-               
-                // --- NOVAS FRASES ADICIONADAS ---
-          
                 "Que a alegria do Natal aqueça seu coração e sua casa.",
                 "Que a felicidade se torne rotina e a esperança seja seu guia.",
                 "Celebre a vida e os momentos inesquecíveis desta época!",
@@ -251,10 +240,10 @@
                 wishMessage.textContent = randomWish;
                 wishMessage.classList.remove('hidden');
 
-                // A mensagem desaparece após 10 segundos (10000 milissegundos)
+                // A mensagem desaparece após 5 segundos
                 setTimeout(() => {
                     wishMessage.classList.add('hidden');
-                }, 10000);
+                }, 5000);
             });
         });
     </script>
